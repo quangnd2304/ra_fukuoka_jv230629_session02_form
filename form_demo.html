@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Demo</title>
+</head>
+
+<body>
+    <!-- 
+        Định danh các phần tử html
+        id: cmt - định danh duy nhất - client
+        class: tên người - định danh chung cho các phần tử cùng đặc tính - 1-N - client
+        name: tên người - định danh chung cho các phần tử cùng đặc tính - 1-N - server
+    -->
+    <!-- Xác định 1 form nhập liệu -->
+    <form action="#" method="post" enctype="multipart/form-data">
+        <!-- action: xác định URL của server mà chúng ta gửi dữ liệu lên -->
+        <!-- method: phương thức xử lý form: get và post -->
+        <!-- enctype: cách thức mã hóa dữ liệu gửi lên server -->
+        <!-- Các thẻ input trong form - Ví dụ form đăng ký -->
+        <fieldset>
+            <legend>Infomation Register</legend>
+            <!-- input type = text -->
+            <label for="userName">User Name</label>
+            <input type="text" name="userName" id="userName" placeholder="input user name" maxlength="10"
+                autocomplete="off" required /><br>
+            <label for="studentId">Student Id</label>
+            <input type="text" name="studentId" id="studentId" value="SV001" readonly /><br>
+            <!-- input type = password - che dấu thông tin nhập -->
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" /><br>
+        </fieldset>
+        <!-- input type = hidden - Ẩn ô input-->
+        <label for="companyRegister">Company</label>
+        <input type="hidden" name="companyRegister" /><br>
+        <!-- input type = checkbok - Cho phép chọn nhiều giá trị -->
+        <label for="sport">Sport</label>
+        <input type="checkbox" name="sport" id="tennis" /> <label for="tennis">Tennis</label>
+        <input type="checkbox" name="sport" id="football" /><label for="football">Football</label>
+        <input type="checkbox" name="sport" id="basketball" /><label for="basketball">Basket ball</label>
+        <br>
+        <!-- input type = radio - cho phép chọn một giá trị duy nhất -->
+        <label for="sex">Sex</label>
+        <input type="radio" name="sex" id="male" checked /><label for="male">Male</label>
+        <input type="radio" name="sex" id="female" /><label for="female">Female</label>
+        <input type="radio" name="sex" id="other" /><label for="other">Other</label><br>
+        <!-- input type = file - cho phép chọn và upload file lên server -->
+        <label for="avatar">Avatar</label>
+        <input type="file" name="avatar" id="avatar" /><br>
+        <label for="multiFile">Multi File</label>
+        <input type="file" name="multiFile" id="multiFile" multiple /><br>
+        <!-- input type = color - Cho phép chọn màu -->
+        <label for="favoriteColor">Favorite Color</label>
+        <input type="color" name="favoriteColor" id="favoriteColor" /><br>
+        <!-- input type = date - chọn ngày/tháng/năm -->
+        <label for="birthDate">Birth Date</label>
+        <input type="date" name="birthDate" id="birthDate" /><br>
+        <!-- input type = datetime-local - chọn ngày/tháng/năm giờ/phút/giây -->
+        <label for="dayhours">Day hours</label>
+        <input type="datetime-local" name="dayhours" id="dayhours" /><br>
+        <!-- input type = month - Chọn tháng/năm -->
+        <label for="monthYear">Month Year</label>
+        <input type="month" name="monthYear" id="monthYear" /><br>
+        <!-- input type = time - Chọn giờ/phút/giây -->
+        <label for="hms">HMS</label>
+        <input type="time" name="hms" id="hms" /><br>
+        <!-- input type = number - chỉ được nhập dữ liệu kiểu số -->
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" min="18" max="25" /><br>
+        <!-- input type = range - chọn giá trị theo thanh trượt -->
+        <label for="mark">Mark</label>
+        <input type="range" name="mark" id="mark" min="0" max="10" /><br>
+        <!-- select - option - Chọn giá trị trong một combobox -->
+        <label for="module">Module</label>
+        <select name="module" id="module">
+            <option value="md1">Module 1</option>
+            <option value="md2">Module 2</option>
+            <option value="md3">Module 3</option>
+        </select><br>
+        <!-- textera - nhập dữ liệu dạng lớn -->
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="5"></textarea><br>
+        <!-- input type = button - tạo button -->
+        <input type="button" value="Back" />
+        <!-- input type = image - tạo button bằng hình ảnh -->
+        <input type="image" src="./images/refesh.png" alt="refesh" width="50" height="50" />
+        <!-- input type = submit - submit form -->
+        <input type="submit" value="Submit">
+        <!-- input type = reset - xóa dữ liệu trên form -->
+        <input type="reset" value="Reset" />
+    </form>
+</body>
+
+</html>
